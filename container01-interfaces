@@ -1,0 +1,20 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto enp0s3
+iface enp0s3 inet static
+    address 10.10.1.60
+    netmask 255.255.255.0
+    network 10.10.1.0
+    broadcast 10.0.0.255
+    gateway 10.10.1.1
+    dns-nameservers 1.1.1.1 1.0.0.1
+    dns-domain rc3labs.com
+    dns-search rc3labs.com
